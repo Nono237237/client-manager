@@ -1,0 +1,26 @@
+Name: Munteh Shannel
+Phone: 9480087478
+Business: cleaning service
+---
+Name: john doe
+Phone: 0998434562
+Business: plumbing
+---
+Name: mary
+Phone: 09876543
+Business: welding
+---
+Name: Ngong Emmanuel
+Phone: 650529383
+Business: plumbing
+---
+Name: Inkling Technologies
+Phone: 675941356
+Business: software
+Location: Bamenda
+---
+Name: mado Kelly
+Phone: 90876
+Business: food processing
+Location: yaounde
+---
