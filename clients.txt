@@ -24,3 +24,8 @@ Phone: 90876
 Business: food processing
 Location: yaounde
 ---
+Name: emba ngelor
+Phone: 7894638
+Business: food processing
+Location: kumba
+---
