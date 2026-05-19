@@ -29,3 +29,8 @@ Phone: 7894638
 Business: food processing
 Location: kumba
 ---
+Name: Killian Luke
+Phone: 9078027406
+Business: Fashion
+Location: Ekondo Titi
+---

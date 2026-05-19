@@ -26,6 +26,27 @@ def load_clients():
     except:
         pass
     return clients
+
+
+def clean_input(prompt, input_type="text"):
+    while True:
+        value = input(prompt).strip()
+
+        if value == "":
+            print("This field cannot be empty. Please try again.")
+            continue
+
+        if input_type == "text":
+            return value.title()
+        
+        if input_type == "phone":
+            value = value.replace("O", "0").replace("O", "0")
+            if not value.isdigit():
+                print("Phone number must contain digits only. Try again.")
+                continue
+            return value
+
+
 def display_client(client):
     print("Name: " + client["name"])
     print("Phone: " + client["phone"])
@@ -45,10 +66,10 @@ def save_client(client):
 
 def add_client():
     client = {}
-    client["name"] = input("Enter client's name: ")
-    client["phone"] = input("Enter client's phone number: ")
-    client["business"] = input("Enter client's business type: ")
-    client["location"] = input("Enter client's location: ")
+    client["name"] = clean_input("Enter client's name: ", "text")
+    client["phone"] = clean_input("Enter client's phone number: ", "phone")
+    client["business"] = clean_input("Enter client's business type: ", "text")
+    client["location"] = clean_input("Enter client's location: ", "text")
     save_client(client)
 
 def view_clients():
