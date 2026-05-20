@@ -34,3 +34,8 @@ Phone: 9078027406
 Business: Fashion
 Location: Ekondo Titi
 ---
+Name: Linda Gwen
+Phone: 9756890
+Business: Entrepreneur
+Location: Bertoua
+---
