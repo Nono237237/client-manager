@@ -39,3 +39,14 @@ Phone: 9756890
 Business: Entrepreneur
 Location: Bertoua
 ---
+
+Name: Nono
+Phone: 75431233
+Business: Lawyer
+Location: Buea
+---
+Name: Munteh Neris
+Phone: 675941356
+Business: Inkling Technologies
+Location: Bamenda
+---
