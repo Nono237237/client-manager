@@ -65,3 +65,21 @@ def search_by_business():
             found = True
     if not found:
         print("No clients found with that business type.")
+
+def count_clients():
+    clients = load_clients()
+    total = len(clients)
+    print("\n---Clients Statistics---")
+    print("Total clients: " + str(total))
+
+    business_types = {}
+    for client in clients:
+        business = client.get("business", "Unknown")
+        if business in business_types:
+            business_types[business] += 1
+        else:
+            business_types[business] = 1
+
+    print("\nClients by Business Type:")
+    for business, count in business_types.items():
+        print(" " + business + ": " +str(count))

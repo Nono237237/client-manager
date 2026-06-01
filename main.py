@@ -1,6 +1,6 @@
 #Handles menu and user interaction
 
-from clients import add_client, view_clients, search_by_name, search_by_business
+from clients import add_client, view_clients, search_by_name, search_by_business, count_clients
 
 while True:
     try:
@@ -9,7 +9,8 @@ while True:
         print("2. View All Clients")
         print("3. Search Clients by name")
         print("4. Search Clients by Business Type")
-        print("5. Exit")
+        print("5. Client Statistics")
+        print("6. Exit")
 
         choice = input("\nChoose an option: ")
 
@@ -22,7 +23,9 @@ while True:
         elif choice == "4":
             search_by_business()
         elif choice == "5":
-            print("Goodbye!")
+            count_clients()
+        elif choice == "6":
+            print("Exiting... Goodbye!")
             break
         else:
             print("Invalid option. Please try again.")
