@@ -1,7 +1,5 @@
-#Handles menu and user interaction
-
+import os
 from clients import add_client, view_clients, search_by_name, search_by_business, count_clients
-
 while True:
     try:
         print("\n=== Client Manager ===")

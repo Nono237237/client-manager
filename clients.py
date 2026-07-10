@@ -10,7 +10,7 @@ def clean_input(prompt, input_type="text"):
             print("This field cannot be empty. Please try again.")
             continue
         if input_type == "text":
-            return "".join(value.split()).title
+            return " ".join(value.split()).title()
         if input_type == "phone":
             value = value.replace("O", "0").replace("o", "0")
             if not value.isdigit():
@@ -22,7 +22,7 @@ def clean_input(prompt, input_type="text"):
 def display_client(client):
     print("Name: " + client["name"])
     print("Phone: " + client["phone"])
-    print("Businesss: " + client.get("business", "N/A"))
+    print("Business: " + client.get("business", "N/A"))
     print("Location: " + client.get("location", "N/A"))
     print("---")
 
@@ -32,7 +32,7 @@ def add_client():
     client["name"] = clean_input("Enter client's name: ", "text")
     client["phone"] = clean_input("Enter client's phone number: ", "phone")
     client["business"] = clean_input("Enter client's business type: ", "text")
-    client["location"] = clean_input("Enter clients location: ", "text")
+    client["location"] = clean_input("Enter client's location: ", "text")
     save_client(client)
 
 def view_clients():
