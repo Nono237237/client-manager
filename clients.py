@@ -83,3 +83,35 @@ def count_clients():
     print("\nClients by Business Type:")
     for business, count in business_types.items():
         print(" " + business + ": " +str(count))
+
+
+def sort_clients():
+    clients = load_clients()
+    if len(clients) == 0:
+        print("No clients found.")
+        return
+    
+
+    print("\nSort by:")
+    print("1. Name")
+    print("2. Business Type")
+    print("3. Location")
+
+    sort_choice = input("\nChoose sort option: ")
+
+    if sort_choice == "1":
+        sorted_clients = sorted(clients, key=lambda c: c["name"].lower())
+        print("\n--- Clients Sorted by Name ---")
+    elif sort_choice == "2":
+        sorted_clients = sorted(clients, key=lambda c: c.get("business", "").lower())
+        print("\n--- Clients Sorted by Business Type ---")
+    elif sort_choice == "3":
+        sorted_clients = sorted(clients, key=lambda c: c.get("location", "").lower())
+        print("\n--- Clients Sorted by Location ---")
+    else:
+        print("Invalid option.")
+        return
+    
+    for client in sorted_clients:
+        display_client(client)
+    

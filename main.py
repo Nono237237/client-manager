@@ -1,5 +1,5 @@
 import os
-from clients import add_client, view_clients, search_by_name, search_by_business, count_clients
+from clients import add_client, view_clients, search_by_name, search_by_business, count_clients, sort_clients
 while True:
     try:
         print("\n=== Client Manager ===")
@@ -8,7 +8,8 @@ while True:
         print("3. Search Clients by name")
         print("4. Search Clients by Business Type")
         print("5. Client Statistics")
-        print("6. Exit")
+        print("6. Sort Clients")
+        print("7. Exit")
 
         choice = input("\nChoose an option: ")
 
@@ -23,10 +24,10 @@ while True:
         elif choice == "5":
             count_clients()
         elif choice == "6":
-            print("Exiting... Goodbye!")
+            sort_clients()
+        elif choice == "7":
+            print("Goodbye!")
             break
-        else:
-            print("Invalid option. Please try again.")
 
     except KeyboardInterrupt:
        print("\n\nGoodbye!")
