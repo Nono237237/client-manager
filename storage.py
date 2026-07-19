@@ -4,9 +4,10 @@
 import csv
 import os
 
+#Auto-create data folder if it doesn't exist
+os.makedirs("data", exist_ok=True)
 
-
-FILENAME = "clients.csv"
+FILENAME = "data/clients.csv"
 HEADERS = ["name", "phone", "business", "location"]
 
 def load_clients():
