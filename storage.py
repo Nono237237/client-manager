@@ -8,7 +8,7 @@ import os
 os.makedirs("data", exist_ok=True)
 
 FILENAME = "data/clients.csv"
-HEADERS = ["name", "phone", "business", "location"]
+HEADERS = ["name", "phone", "business", "location", "date_joined"]
 
 def load_clients():
     clients = []

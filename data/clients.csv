@@ -1,8 +1,18 @@
-name,phone,business,location
-Adel Kirk,9077920764,Mechanical Engineer,Yaounde
-Munteh Neris,675941347,Inkling,Buea
-Grace Funkiun,673216755,Designer,Buea
-Munteh Shannel,9480087478,Cleaning Service,N/A
-John Doe,0998434562,Plumbing,N/A
-Mary,09876543,Welding,N/A
-Ngong Emmanuel,650529383,Plumbing,N/A
+name,phone,business,location,date_joined
+Mark Fuller,097752688475,Entrepreneur,Bamenda,2026-07-21
+Adel Kirk,876589023,Fashion Designer,Buea,2026-07-21
+Munteh Neris Nono,675941356,Techpreneur,Bamenda,2026-07-21
+Shannel Nain,65414020,Writer,Limbe,2026-07-21
+John Doe,8998756231,Plumber,Kumba,2026-07-21
+Grace Funkiun,657893866,Hair Dresser,Limbe,2026-07-21
+Munteh Shannel,,cleaning service,,N/A
+john doe,,plumbing,,N/A
+mary,,welding,,N/A
+Ngong Emmanuel,,plumbing,,N/A
+Inkling Technologies,,software,,N/A
+mado Kelly,,food processing,,N/A
+emba ngelor,,food processing,,N/A
+Killian Luke,,Fashion,,N/A
+Linda Gwen,,Entrepreneur,,N/A
+Nono,,Lawyer,,N/A
+Munteh Neris,,Inkling Technologies,,N/A

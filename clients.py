@@ -1,5 +1,7 @@
 #Handles all client operations
 
+from datetime import datetime
+
 from storage import load_clients, save_client
 
 def clean_input(prompt, input_type="text"):
@@ -24,6 +26,7 @@ def display_client(client):
     print("Phone: " + client["phone"])
     print("Business: " + client.get("business", "N/A"))
     print("Location: " + client.get("location", "N/A"))
+    print("Date Joined: " + client.get("date_joined", "N/A"))
     print("---")
 
 
@@ -33,6 +36,7 @@ def add_client():
     client["phone"] = clean_input("Enter client's phone number: ", "phone")
     client["business"] = clean_input("Enter client's business type: ", "text")
     client["location"] = clean_input("Enter client's location: ", "text")
+    client["date_joined"] = datetime.now().strftime("%Y-%m-%d")
     save_client(client)
 
 def view_clients():

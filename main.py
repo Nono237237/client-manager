@@ -11,7 +11,7 @@ while True:
         print("6. Sort Clients")
         print("7. Exit")
 
-        choice = input("\nChoose an option: ")
+        choice = input("\nChoose an option: ") 
 
         if choice == "1":
             add_client()
