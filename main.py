@@ -1,5 +1,14 @@
 import os
+from config import load_config
 from clients import add_client, view_clients, search_by_name, search_by_business, count_clients, sort_clients
+
+config = load_config()
+
+owner = config.get("owner", "there")
+first_name = owner.split()[0]
+print("\n👋 Welcome back, " + first_name + "!")
+print("📋" + config.get("app_name", "Client Manager") + " v" + config.get("version", "1.0"))
+
 while True:
     try:
         print("\n=== Client Manager ===")

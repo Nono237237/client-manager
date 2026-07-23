@@ -1,5 +1,8 @@
 #Handles all client operations
 
+from config import load_config
+config = load_config()
+
 from datetime import datetime
 
 from storage import load_clients, save_client
@@ -31,12 +34,17 @@ def display_client(client):
 
 
 def add_client():
+    clients = load_clients()
+    max_clients = config.get("max_clients", 1000)
+    if len(clients) >= max_clients:
+        print("⚠️ Maximum number client limit of " + str(max_clients) + " reached." )
+        return
     client = {}
     client["name"] = clean_input("Enter client's name: ", "text")
     client["phone"] = clean_input("Enter client's phone number: ", "phone")
     client["business"] = clean_input("Enter client's business type: ", "text")
     client["location"] = clean_input("Enter client's location: ", "text")
-    client["date_joined"] = datetime.now().strftime("%Y-%m-%d")
+    client["date_joined"] = datetime.now().strftime(config.get("date_format", "%Y-%m-%d"))
     save_client(client)
 
 def view_clients():

@@ -1,0 +1,8 @@
+{
+    "app_name": "Client_Manager",
+    "version": "1.0",
+    "date_format": "%Y-%m-%d",
+    "max_clients": 100,
+    "auto_backup": true,
+    "currency": "XAF"
+}
