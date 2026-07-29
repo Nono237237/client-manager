@@ -1,0 +1,54 @@
+========================================
+CLIENT MANAGER - BUSINESS REPORT
+Generated: 2026-07-28
+========================================
+
+TOTAL CLIENTS: 17
+
+CLIENTS BY BUSINESS TYPE:
+------------------------------
+Entrepreneur: 2
+Food Processing: 2
+Fashion Designer: 1
+Techpreneur: 1
+Writer: 1
+Plumber: 1
+Hair Dresser: 1
+Cleaning Service: 1
+Welding: 1
+Plumbing: 1
+Software: 1
+Fashion: 1
+Lawyer: 1
+Inkling Technologies: 1
+Graphic Design: 1
+
+CLIENTS BY LOCATION:
+------------------------------
+Bamenda: 3
+Limbe: 2
+Buea: 1
+Kumba: 1
+
+FULL CLIENT LIST:
+-------------------------------
+Mark Fuller | Entrepreneur | Bamenda
+Adel Kirk | Fashion Designer | Buea
+Munteh Neris Nono | Techpreneur | Bamenda
+Shannel Nain | Writer | Limbe
+John Doe | Plumber | Kumba
+Grace Funkiun | Hair Dresser | Limbe
+Munteh Shannel | Cleaning Service | nan
+Mary | Welding | nan
+Ngong Emmanuel | Plumbing | nan
+Inkling Technologies | Software | nan
+Mado Kelly | Food Processing | nan
+Emba Ngelor | Food Processing | nan
+Killian Luke | Fashion | nan
+Linda Gwen | Entrepreneur | nan
+Nono | Lawyer | nan
+Munteh Neris | Inkling Technologies | nan
+Desmond Aluma | Graphic Design | Bamenda
+
+========================================
+END OF REPORT
