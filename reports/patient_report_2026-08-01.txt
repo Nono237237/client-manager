@@ -1,0 +1,48 @@
+=============================================
+ CLINIC PATIENT REPORT
+ Generated: 2026-08-01
+=============================================
+
+TOTAL NUMBER OF PATIENTS: 101
+
+PATIENTS BY CONDITION:
+------------------------------
+Malaria: 13
+Amenia: 12
+Skin Disease: 10
+General Checkup: 9
+Asthma: 9
+Skin Condition: 8
+eye Infection: 8
+Diabetes: 8
+Dental Issues: 6
+Hypertension: 6
+Respiratory Infection: 6
+Typhoid: 5
+condition: 1
+
+PATIENTS BY CITY:
+------------------------------
+Limbe: 12
+Mutengene: 10
+Bertoua: 10
+Garoua: 8
+Yaounde: 8
+Maroua: 8
+Bamenda: 6
+Buea: 6
+Nkongsamba: 6
+Douala: 5
+Dschang: 5
+Ngaoundere: 4
+Bafoussam: 4
+Kumba: 4
+Kribi: 2
+Ebolowa: 2
+location: 1
+
+MOST COMMON CONDITION: Malaria
+MOST PATIENTS FROM: Limbe
+
+=============================================
+END OF REPORT
