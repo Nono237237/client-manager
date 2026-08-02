@@ -29,7 +29,7 @@ last_names = [
 
 conditions = [
     "Malaria", "Typhoid", "Hypertension", "Diabetes", "Asthma",
-    "Respiratory Infection", "Amenia", "Skin Condition", "Skin Disease",
+    "Respiratory Infection", "Anemia", "Skin Condition", "Skin Disease",
     "eye Infection", "Dental Issues", "General Checkup"
 ]
 
