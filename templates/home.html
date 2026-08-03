@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Mary's Hospital</title>
+</head>
+<body>
+    <h1>Welcome to St. Mary's Hospital</h1>
+    <p>Good morning, {{ nurse_name }}!</p>
+    <p>Today is {{ date }}.</p>
+
+    <h2>Hospital Stats</h2>
+    <ul>
+        <li>Total Patients: {{ total_patients }}</li>
+        <li>Waiting Queue: {{ waiting }}</li>
+        <li>Admissions: {{ admissions }}</li>
+        <li>Emergency Cases: {{ emergency }}</li>
+    </ul>
+
+    <h2>Quick Actions</h2>
+    <ul>
+        <li><a href="/patients">View Patients</a></li>
+        <li><a href="/appointments">View Appointments</a></li>
+    </ul>
+    
+</body>
+</html>
