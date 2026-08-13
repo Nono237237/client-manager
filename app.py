@@ -20,12 +20,13 @@ def home():
 
 @app.route("/patients")
 def patients():
-    return "<h1>Patient list</h1>"
-
-@app.route("/appointments")
-def appointments():
-    return "<h1>Appointments</h1>"
-
+    df = pd.read_csv("data/patients.csv")
+    patients_list = df.to_dict(orient="records")
+    return render_template(
+        "patients.html",
+        patients=patients_list,
+        total=len(df)
+    )
 
 if __name__ == "__main__":
     app.run(debug=True)

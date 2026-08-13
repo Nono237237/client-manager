@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Lists - St. Mary's Hospital</title>
+</head>
+<body>
+    <h1>Patient Lists</h1>
+    <p><a href="/">← Back to Dashboard</a></p>
+    <p>Total Patients: {{ total }}</p>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Condition</th>
+            <th>Location</th>
+            <th>Date joined</th>
+            <th>Priority</th>
+        </tr>
+        {% for patient in patients %}
+        {% if patient.priority == "emergency" %}
+        <tr style="background-color: #ffcccc;">
+         {% elif patient.priority == "high" %}
+        <tr style="background-color: #fff3cc;">
+         {% else %}
+        <tr style="background-color: #ccffcc;">
+        {% endif %}
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.phone }}</td>
+            <td>{{ patient.condition }}</td>
+            <td>{{ patient.location }}</td>
+            <td>{{ patient.date_joined }}</td>
+            <td>{{ patient.priority }}</td>
+          
+        </tr>
+
+
+
+        
+        {% endfor %}
+
+    </table>
+</body>
+</html>
