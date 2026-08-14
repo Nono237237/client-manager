@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Patient - St. Mary's Hospital</title>
+</head>
+<body>
+    <h1>Register New Patient</h1>
+    <p><a href="/">← Back to Dashboard</a></p>
+
+    {% if message %}
+    <p style="color: green;"><strong>{{ message }}</strong></p>
+    {% endif %}
+
+    <form method="POST" action="/register">
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="text" name="phone" required></td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date" name="dob" required></td>
+            </tr>
+            <tr>
+                <td>Chief Complaint:</td>
+                <td><input type="text" name="condition" required></td>
+            </tr>
+            <tr>
+                <td>Allergies:</td>
+                <td><input type="text" name="allergies" placeholder="None if not applicable"></td>
+            </tr>
+            <tr>
+                <td>Emergency Contact:</td>
+                <td><input type="text" name="emergency_contact" required></td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td><input type="text" name="location"></td>
+            </tr>
+            <tr>
+                <td>Priority:</td>
+                <td>
+                    <select name="priority">
+                        <option value="normal">Normal</option>
+                        <option value="high">High</option>
+                        <option value="emergency">Emergency</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Register Patient">
+    </form>
+</body>
+</html>
