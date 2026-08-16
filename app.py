@@ -21,11 +21,25 @@ def home():
 @app.route("/patients")
 def patients():
     df = pd.read_csv("data/patients.csv")
+
+    search_term = request.args.get("search", "")
+    priority_filter = request.args.get("priority", "")
+
+    if search_term:
+       df = df[df["name"].str.lower().str.contains(search_term.lower(), na=False)] 
+
+    if priority_filter and priority_filter != "":
+        df = df[df["priority"] == priority_filter]
+
+    df = df.fillna("N/A")
     patients_list = df.to_dict(orient="records")
+
     return render_template(
         "patients.html",
         patients=patients_list,
-        total=len(df)
+        total=len(df),
+        search_term=search_term,
+        priority_filter=priority_filter
     )
 @app.route("/register", methods=["GET"])
 def register():

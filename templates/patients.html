@@ -8,6 +8,20 @@
 <body>
     <h1>Patient Lists</h1>
     <p><a href="/">← Back to Dashboard</a></p>
+
+    <form method="GET" action="/patients">
+        <input type="text" name="search" placeholder="Search by name..." value="{{ search_term }}">
+        <select name="priority">
+            <option value="">All Priorities</option>
+            <option value="normal" {% if priority_filter == "normal" %}selected{% endif %}>Normal</option>
+            <option value="high" {% if priority_filter == "high" %}selected{% endif %}>High</option>
+            <option value="emergency" {% if priority_filter == "emergency" %}selected{% endif %}>Emergency</option>
+
+        </select>
+        <input type="submit" value="Search">
+        <a href="/patients">Clear</a>
+    </form>
+
     <p>Total Patients: {{ total }}</p>
 
     <table border="1">
