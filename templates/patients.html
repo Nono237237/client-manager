@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient Lists - St. Mary's Hospital</title>
 </head>
@@ -33,14 +34,8 @@
             <th>Date joined</th>
             <th>Priority</th>
         </tr>
-        {% for patient in patients %}
-        {% if patient.priority == "emergency" %}
-        <tr style="background-color: #ffcccc;">
-         {% elif patient.priority == "high" %}
-        <tr style="background-color: #fff3cc;">
-         {% else %}
-        <tr style="background-color: #ccffcc;">
-        {% endif %}
+       {% for patient in patients %}
+        <tr class="row-{{ patient.priority }}">
             <td>{{ patient.name }}</td>
             <td>{{ patient.phone }}</td>
             <td>{{ patient.condition }}</td>

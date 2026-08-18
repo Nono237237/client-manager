@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>St. Mary's Hospital</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         <li>Total Patients: {{ total_patients }}</li>
         <li>Waiting Queue: {{ waiting }}</li>
         <li>Admissions: {{ admissions }}</li>
-        <li>Emergency Cases: {{ emergency }}</li>
+        <li class="alert-box">Emergency Cases: {{ emergency }}</li>
     </ul>
 
     <h2>Quick Actions</h2>
