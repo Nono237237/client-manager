@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Lists - St. Mary's Hospital</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}St. Mary's Hospital - Patients{% endblock %}
+
+{% block content %}
     <h1>Patient Lists</h1>
     <p><a href="/">← Back to Dashboard</a></p>
 
@@ -17,7 +13,6 @@
             <option value="normal" {% if priority_filter == "normal" %}selected{% endif %}>Normal</option>
             <option value="high" {% if priority_filter == "high" %}selected{% endif %}>High</option>
             <option value="emergency" {% if priority_filter == "emergency" %}selected{% endif %}>Emergency</option>
-
         </select>
         <input type="submit" value="Search">
         <a href="/patients">Clear</a>
@@ -34,7 +29,7 @@
             <th>Date joined</th>
             <th>Priority</th>
         </tr>
-       {% for patient in patients %}
+        {% for patient in patients %}
         <tr class="row-{{ patient.priority }}">
             <td>{{ patient.name }}</td>
             <td>{{ patient.phone }}</td>
@@ -42,14 +37,7 @@
             <td>{{ patient.location }}</td>
             <td>{{ patient.date_joined }}</td>
             <td>{{ patient.priority }}</td>
-          
         </tr>
-
-
-
-        
         {% endfor %}
-
     </table>
-</body>
-</html>
+{% endblock %}

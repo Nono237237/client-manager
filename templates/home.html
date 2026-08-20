@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>St. Mary's Hospital</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}St. Mary's Hospital - Home{% endblock %}
+
+{% block content %}
     <h1>Welcome to St. Mary's Hospital</h1>
     <p>Good morning, {{ nurse_name }}!</p>
     <p>Today is {{ date }}.</p>
@@ -24,6 +21,4 @@
         <li><a href="/appointments">View Appointments</a></li>
         <li><a href="/register">Register New Patient</a></li>
     </ul>
-    
-</body>
-</html>
+{% endblock %}
