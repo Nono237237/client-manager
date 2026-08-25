@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Patient - St. Mary's Hospital</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}St. Mary's Hospital -Register{% endblock %}
+
+{% block content %}
     <h1>Register New Patient</h1>
     <p><a href="/">← Back to Dashboard</a></p>
 
@@ -57,5 +54,4 @@
         <br>
         <input type="submit" value="Register Patient">
     </form>
-</body>
-</html>
+{% endblock %}
